@@ -235,7 +235,7 @@ conf:
           pgpass: '{{ .Values.storage.mount.path }}/pgpass'
           use_pg_rewind: true
           parameters:
-            archive_mode: 'on'
+            archive_mode: 'off'
             archive_timeout: 1800s
             autovacuum_analyze_scale_factor: 0.02
             autovacuum_max_workers: 5
@@ -297,7 +297,7 @@ conf:
         on_start: /tmp/set_password.sh
       use_pg_rewind: true
       parameters:
-        archive_mode: 'on'
+        archive_mode: 'off'
         archive_timeout: 1800s
         autovacuum_analyze_scale_factor: 0.02
         autovacuum_max_workers: 5
