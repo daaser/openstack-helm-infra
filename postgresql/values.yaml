@@ -132,7 +132,7 @@ images:
 storage:
   pvc:
     enabled: true
-    size: 1Gi
+    size: 5Gi
     class_name: general
     class_path: volume.beta.kubernetes.io/storage-class
   host:
