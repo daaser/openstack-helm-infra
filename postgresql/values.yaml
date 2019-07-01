@@ -268,8 +268,8 @@ conf:
             timezone: 'UTC'
             track_commit_timestamp: 'on'
             track_functions: all
-            wal_keep_segments: 100
-            wal_level: 'logical'
+            wal_keep_segments: 8
+            wal_level: hot_standby
             wal_log_hints: 'on'
       initdb:
       - auth-host: md5
@@ -331,8 +331,8 @@ conf:
         track_commit_timestamp: 'on'
         track_functions: all
         shared_buffers: {{ .Values.conf.postgresql.shared_buffers }}
-        wal_keep_segments: 100
-        wal_level: 'logical'
+        wal_keep_segments: 8
+        wal_level: hot_standby
         wal_log_hints: 'on'
       pg_hba:
       - host all all 127.0.0.1/32 trust
